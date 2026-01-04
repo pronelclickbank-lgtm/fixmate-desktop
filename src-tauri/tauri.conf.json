@@ -17,16 +17,7 @@
       "icons/256x256.png",
       "icons/icon.ico",
       "icons/icon.png"
-    ],
-    "windows": {
-      "wix": {
-        "language": "en-US"
-      },
-      "nsis": {
-        "installerIcon": "icons/icon.ico",
-        "installMode": "perUser"
-      }
-    }
+    ]
   },
   "app": {
     "windows": [
