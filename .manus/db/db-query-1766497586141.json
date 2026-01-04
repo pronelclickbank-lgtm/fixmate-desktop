@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS performanceSnapshots (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  userId INT NOT NULL,\n  snapshotType ENUM('before_fix', 'after_fix') NOT NULL,\n  fixType VARCHAR(100),\n  bootTimeSeconds INT,\n  cpuUsagePercent INT,\n  memoryUsagePercent INT,\n  diskUsagePercent INT,\n  startupProgramsCount INT,\n  outdatedDriversCount INT,\n  securityIssuesCount INT,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user cPRUkYw17AYhxV9.9bac57ba8fbc --database KLAyoHM6A4xBmdvHf6EzLV --execute CREATE TABLE IF NOT EXISTS performanceSnapshots (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  userId INT NOT NULL,\n  snapshotType ENUM('before_fix', 'after_fix') NOT NULL,\n  fixType VARCHAR(100),\n  bootTimeSeconds INT,\n  cpuUsagePercent INT,\n  memoryUsagePercent INT,\n  diskUsagePercent INT,\n  startupProgramsCount INT,\n  outdatedDriversCount INT,\n  securityIssuesCount INT,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1626
+}

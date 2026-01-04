@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `system_backups` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`userId` int NOT NULL,\n\t`name` varchar(256) NOT NULL,\n\t`description` text,\n\t`systemState` text NOT NULL,\n\t`diagnosticsSnapshot` text,\n\t`metricsSnapshot` text,\n\t`sizeMB` int NOT NULL DEFAULT 0,\n\t`backupType` enum('manual','automatic','pre-optimization') NOT NULL DEFAULT 'manual',\n\t`status` enum('creating','completed','failed') NOT NULL DEFAULT 'creating',\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\tCONSTRAINT `system_backups_id` PRIMARY KEY(`id`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user cPRUkYw17AYhxV9.9bac57ba8fbc --database KLAyoHM6A4xBmdvHf6EzLV --execute CREATE TABLE IF NOT EXISTS `system_backups` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`userId` int NOT NULL,\n\t`name` varchar(256) NOT NULL,\n\t`description` text,\n\t`systemState` text NOT NULL,\n\t`diagnosticsSnapshot` text,\n\t`metricsSnapshot` text,\n\t`sizeMB` int NOT NULL DEFAULT 0,\n\t`backupType` enum('manual','automatic','pre-optimization') NOT NULL DEFAULT 'manual',\n\t`status` enum('creating','completed','failed') NOT NULL DEFAULT 'creating',\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\tCONSTRAINT `system_backups_id` PRIMARY KEY(`id`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1656
+}

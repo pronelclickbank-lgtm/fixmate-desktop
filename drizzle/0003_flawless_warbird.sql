@@ -1,0 +1,20 @@
+CREATE TABLE `appSettings` (
+	`id` int AUTO_INCREMENT NOT NULL,
+	`proPlanEnabled` enum('true','false') NOT NULL DEFAULT 'false',
+	`monthlyPrice` int NOT NULL DEFAULT 999,
+	`yearlyPrice` int NOT NULL DEFAULT 9999,
+	`trialDays` int NOT NULL DEFAULT 5,
+	`paypalEnabled` enum('true','false') NOT NULL DEFAULT 'false',
+	`stripeEnabled` enum('true','false') NOT NULL DEFAULT 'false',
+	`intuitEnabled` enum('true','false') NOT NULL DEFAULT 'false',
+	`paypalClientId` text,
+	`paypalClientSecret` text,
+	`paypalMode` enum('sandbox','live') DEFAULT 'sandbox',
+	`stripePublicKey` text,
+	`stripeSecretKey` text,
+	`intuitClientId` text,
+	`intuitClientSecret` text,
+	`createdAt` timestamp NOT NULL DEFAULT (now()),
+	`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
+	CONSTRAINT `appSettings_id` PRIMARY KEY(`id`)
+);

@@ -1,0 +1,9 @@
+{
+  "query": "ALTER TABLE subscriptions \nMODIFY COLUMN tier ENUM('free', 'trial', 'pro') DEFAULT 'free' NOT NULL,\nADD COLUMN IF NOT EXISTS plan ENUM('none', 'monthly', 'quarterly', 'biannual', 'annual') DEFAULT 'none',\nMODIFY COLUMN status ENUM('active', 'trial', 'cancelled', 'expired') DEFAULT 'active' NOT NULL,\nADD COLUMN IF NOT EXISTS trialStartedAt TIMESTAMP NULL,\nADD COLUMN IF NOT EXISTS trialEndsAt TIMESTAMP NULL,\nADD COLUMN IF NOT EXISTS hasUsedTrial INT DEFAULT 0 NOT NULL;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user cPRUkYw17AYhxV9.9bac57ba8fbc --database KLAyoHM6A4xBmdvHf6EzLV --execute ALTER TABLE subscriptions \nMODIFY COLUMN tier ENUM('free', 'trial', 'pro') DEFAULT 'free' NOT NULL,\nADD COLUMN IF NOT EXISTS plan ENUM('none', 'monthly', 'quarterly', 'biannual', 'annual') DEFAULT 'none',\nMODIFY COLUMN status ENUM('active', 'trial', 'cancelled', 'expired') DEFAULT 'active' NOT NULL,\nADD COLUMN IF NOT EXISTS trialStartedAt TIMESTAMP NULL,\nADD COLUMN IF NOT EXISTS trialEndsAt TIMESTAMP NULL,\nADD COLUMN IF NOT EXISTS hasUsedTrial INT DEFAULT 0 NOT NULL;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 3589
+}

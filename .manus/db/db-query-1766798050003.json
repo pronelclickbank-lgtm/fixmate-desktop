@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS automatic_settings (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  userId INT NOT NULL,\n  scheduleEnabled INT DEFAULT 0 NOT NULL,\n  scheduleFrequency VARCHAR(20) DEFAULT 'weekly' NOT NULL,\n  optimizeOnStartup INT DEFAULT 0 NOT NULL,\n  lowDiskSpaceEnabled INT DEFAULT 0 NOT NULL,\n  diskSpaceThreshold INT DEFAULT 10 NOT NULL,\n  autoBackup INT DEFAULT 1 NOT NULL,\n  optimizationProfile VARCHAR(20) DEFAULT 'balanced' NOT NULL,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,\n  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user cPRUkYw17AYhxV9.9bac57ba8fbc --database KLAyoHM6A4xBmdvHf6EzLV --execute CREATE TABLE IF NOT EXISTS automatic_settings (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  userId INT NOT NULL,\n  scheduleEnabled INT DEFAULT 0 NOT NULL,\n  scheduleFrequency VARCHAR(20) DEFAULT 'weekly' NOT NULL,\n  optimizeOnStartup INT DEFAULT 0 NOT NULL,\n  lowDiskSpaceEnabled INT DEFAULT 0 NOT NULL,\n  diskSpaceThreshold INT DEFAULT 10 NOT NULL,\n  autoBackup INT DEFAULT 1 NOT NULL,\n  optimizationProfile VARCHAR(20) DEFAULT 'balanced' NOT NULL,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,\n  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 2228
+}

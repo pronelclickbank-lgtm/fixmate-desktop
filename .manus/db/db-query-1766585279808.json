@@ -1,0 +1,9 @@
+{
+  "query": "ALTER TABLE `users` ADD `phone` varchar(20);\nALTER TABLE `users` ADD `registeredAt` timestamp;\nALTER TABLE `users` ADD `isRegistered` int DEFAULT 0 NOT NULL;\nALTER TABLE `users` ADD `usageCount` int DEFAULT 0 NOT NULL;\nALTER TABLE `users` ADD `lastUsedAt` timestamp;\nALTER TABLE `users` ADD `lastNotificationSentAt` timestamp;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user cPRUkYw17AYhxV9.9bac57ba8fbc --database KLAyoHM6A4xBmdvHf6EzLV --execute ALTER TABLE `users` ADD `phone` varchar(20);\nALTER TABLE `users` ADD `registeredAt` timestamp;\nALTER TABLE `users` ADD `isRegistered` int DEFAULT 0 NOT NULL;\nALTER TABLE `users` ADD `usageCount` int DEFAULT 0 NOT NULL;\nALTER TABLE `users` ADD `lastUsedAt` timestamp;\nALTER TABLE `users` ADD `lastNotificationSentAt` timestamp;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 5405
+}
